@@ -4,8 +4,8 @@ def divide(x, y):
     try:
         result = x / y
     except ZeroDivisionError:
-        """加上ZeroDivisionError关键字后，规定了异常类型，
-           即只有发生零除异常时，才会执行except中的代码块"""
+        # 加上ZeroDivisionError关键字后，规定了异常类型，
+        # 即只有发生零除异常时，才会执行except中的代码块
         print("division by zero!")
     # except:
     #     """只要发生错误，就执行except，不推荐这样"""
@@ -48,6 +48,3 @@ def func_try():
         print("a不是数字")
     finally:
         print("程序结束")
-
-
-func_try()

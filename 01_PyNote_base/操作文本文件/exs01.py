@@ -15,7 +15,8 @@ def read1():
     f.close()
 
 
-def read2():    # 读取文件（按行读取）
+def read2():
+    """ 读取文件（按行读取）"""
     f = open("file01.txt", "r", encoding="utf-8")
     print(f.readline())         # 从指针位置开始读取一行内容
     print(f.readline(), end="\n")
@@ -31,7 +32,7 @@ def read2():    # 读取文件（按行读取）
     f.close()
 
 
-def read3():    # 使用with关键字
+def read3():
     """with提供了一种优雅的方式来处理文件操作、数据库连接等需要明确释放资源的场景。"""
     with open(r"../02_PyNote_professional/_file01.txt", "r", encoding="utf-8") as f:
         print(f.read())      # 在这内容执行完毕后，文件自动关闭

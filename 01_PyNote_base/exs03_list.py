@@ -11,7 +11,7 @@
 
 
 def exs01():
-    """索引、切片"""
+    """-索引、切片-"""
     list1 = [1, 2, 3, 4, 5]
     print(list1[0], list1[1], list1[-1], list1[-5])     # 索引返回元素。>> 1 2 5 1
     print(list1[0:4])       # 切片返回列表,左闭右开。>> [1, 2, 3, 4]
@@ -23,21 +23,21 @@ def exs01():
 
 
 def exs02():
-    """编辑列表"""
-    """更新"""
+    """-编辑列表-"""
+    # 更新
     list1 = ["一", "二", "三"]
-    list1[0] = "四"         # 更新元素
+    list1[0] = "四"          # 更新元素
     print(list1, "\n")      # >> ['四', '二', '三']
 
-    """追加"""
+    # 追加
     list1.append("五")
     print(list1, "\n")      # >> ['四', '二', '三', '五']
 
-    """插入"""
+    # 插入
     list1.insert(1, "六")
     print(list1, "\n")      # >> ['四', '六', '二', '三', '五']
 
-    """删除"""
+    # 删除
     list1.remove("六")       # >> 指定元素值，删除第一个匹配项
     print(list1, "\n")      # >> ['四', '二', '三', '五']
     del list1[-1]           # >> 指定索引位置，删除的元素
@@ -47,29 +47,30 @@ def exs02():
     list1.clear()           # 清空列表
     print(list1, "\n")            # >> []
 
-    """拼接（加运算）（与字符串类似）"""
+    # 拼接（加运算）（与字符串类似）
     list2, list3 = [1, 2, 3], [4, 5, 6]
     list4 = list2 + list3
     print(list4, "\n")      # >> [1, 2, 3, 4, 5, 6]
 
-    """乘运算"""
+    # 乘运算
     list5 = list2 * 2
     print(list5, "\n")      # >> [1, 2, 3, 1, 2, 3]
 
 
 def exs03():
-    """包含关系"""
+    """-列表功能-"""
+    # 包含关系
     list1, int1 = [1, 2, 3, 4, 5], 2
     int2 = 6
-    print(int1 in list1, int2 in list1)
+    print(int1 in list1, int2 in list1)     # >> True False
 
-    """遍历"""
+    # 遍历
     for i in list1:
         print(i, end="-")
 
 
 def exs04():
-    """列表函数"""
+    """-列表函数-"""
     list1 = [1, 2, 3, 4, 5]
     print(len(list1))       # 列表长度
     print(max(list1))       # >> 5
@@ -90,7 +91,7 @@ def exs04():
 
 
 def exs05():
-    """列表方法"""
+    """-列表方法-"""
     list1 = [1, 2, 3, 4, -2, 0]
     list1.reverse()         # 翻转。返回值None
     print(list1)            # >> [0, -2, 4, 3, 2, 1]

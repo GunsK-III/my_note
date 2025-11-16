@@ -8,6 +8,7 @@ def timeit(inte: int) -> callable:
 
         def wrapper(*args, **kwargs):
             start = time.time()
+            res = None      # 为防止迭代不进行，这里初始化None
             for _ in range(inte):
                 res = func(*args, **kwargs)
             cost = time.time() - start
@@ -19,5 +20,6 @@ def timeit(inte: int) -> callable:
 @timeit(10000000)   # 大约0.5秒迭代10000000次
 def double(x):
     return x * 2
+
 
 double(2)

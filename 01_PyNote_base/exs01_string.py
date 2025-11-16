@@ -13,14 +13,14 @@
 
 
 def exs01():
-    """基础"""
-    str_a = "hello"  # 字符串定义
+    """-基础-"""
+    str_a = "hello"                 # 字符串定义
     str_b = "world"
-    print(len(str_a), len(str_b))  # 字符串长度
+    print(len(str_a), len(str_b))   # 字符串长度
 
 
 def exs02():
-    """转义符"""
+    """-转义符-"""
     print("hello\
     world")                  # 续行符 “\”
     print("hello\nworld")    # 换行符 “\n”
@@ -35,7 +35,7 @@ def exs02():
 
 
 def exs03():
-    """运算符"""
+    """-运算符-"""
     a = "hello"
     b = "world"
     print(a + b)            # 字符串拼接
@@ -50,7 +50,7 @@ def exs03():
 
 
 def exs04():
-    """% 占位符"""
+    """- % 占位符-"""
     print("0123%s" % "456")     # %s 字符串格式化。>>0123456
     print("0123%d" % 456)       # %d 数值格式化，注意这里是将456插入到%d的位置，所以输出是字符串。>>0123456
     print("0123%f" % 456)       # %f 浮点数格式化，默认6位小数。>>0123456.000000
@@ -59,7 +59,7 @@ def exs04():
 
 
 def exs05():
-    """内建函数"""
+    """-内建函数-"""
     a = "hello World"
     print(a.capitalize())                       # 首字母大写，剩余小写。>>Hello world
     print(a.center(20, "-"))    # 字符串居中，填充字符为-。
@@ -76,7 +76,7 @@ def exs05():
 
 
 def exs051():
-    """更多内建函数"""
+    """-更多内建函数-"""
     a, b, c = "", "-", "hello"
     print(a.join(c), b.join(c))     # 将序列中的元素以指定的字符连接生成一个新的字符串
     print(len(c))       # 字符串长度
@@ -96,7 +96,7 @@ def exs051():
 
 
 def exs052():
-    """join 用法。str.join(sequence)，将字串作为分隔符插入到序列当中"""
+    """- join 用法。str.join(sequence)，将字串作为分隔符插入到序列当中-"""
     a = "HelloWorld"
     print("".join(a))       # >>HelloWorld
     print(" ".join(a))      # >>H e l l o W o r l d
@@ -108,14 +108,14 @@ def exs052():
 
 
 def exs06():
-    """format()格式化字符串"""
+    """- format()格式化字符串-"""
     print("{0} {1} {2}".format("a", "b", "c"))      # >>a b c
     print("{1} {0} {2}".format("a", "b", "c"))      # >>b a c
     print("我叫{name}，我是{career}".format(name="小王", career="程序员"))        # >>我叫小王，我是程序员
 
 
 def exs07():
-    """f-string"""
+    """- f-string -"""
     name, career = "小王", "程序员"                  # 可以单独定义
     print(f"我叫{name}，我是{career}")
 
