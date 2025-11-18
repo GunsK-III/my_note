@@ -53,3 +53,8 @@ def comprehensive_example(a, b, /, c, d=10, *, e, f=20, **kwargs):
 # comprehensive_example(1, 2, c=3, d=40, e=30, f=50)             # 指定所有参数
 # comprehensive_example(1, 2, 3, e=30, extra1="x", extra2="y")   # 带额外参数
 
+
+""" 04 内置函数。
+    当这个模块被调用时，只有公共函数被调用，内部函数不被调用"""
+def _internal_function():
+    print("内部函数")
