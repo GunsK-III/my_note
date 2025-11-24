@@ -1,6 +1,8 @@
 """ 内置函数
     目录：
-        01. sorted()函数：01 - 04"""
+        01. sorted()函数： 01 - 04
+        02. map()函数：    05
+"""
 
 
 # 1. sorted() 自定义排序函数
@@ -64,5 +66,20 @@ def exs04():
     sorted_students = sorted(students, key=lambda s: (-s['grade'], s['name']))
     for student in sorted_students:
         print(student)
+
+
+def exs05():
+    """ map() 会根据提供的函数对指定序列做映射。具体过程是接受一个函数和一个可迭代对象，并返回一个迭代器
+        第一个参数 function 以参数序列中的每一个元素调用 function 函数，返回包含每次 function 函数返回值的新列表。"""
+    def square(x):  # 计算平方数
+        return x ** 2
+
+    map(square, [1, 2, 3, 4, 5])
+    # print(map)      # >> <class 'map'>
+    list1 = list(map(square, [1, 2, 3, 4, 5]))
+    print(list1)      # >> [1, 4, 9, 16, 25]
+    list2 = list(map(lambda x: x ** 2, [1, 2, 3, 4, 5]))  # 使用 lambda 匿名函数
+    print(list2)      # >> [1, 4, 9, 16, 25]
+
 
 

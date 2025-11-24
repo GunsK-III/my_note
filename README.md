@@ -1,1 +1,1 @@
-学习笔记
+# Gunsk is studying Python and taking notes.
