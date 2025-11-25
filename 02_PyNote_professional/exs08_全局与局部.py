@@ -10,16 +10,17 @@ def exs01():
     print('全局 x =', x)      # → 全局 x = 100
 
 
-def exs02():
-    count = 0                # 全局计数器
+# ——————————————————————————————————————————————————————————————————
+count = 0                # 全局计数器
 
-    def add_one():
-        global count        # 声明“下面的 count 就是全局那个”
-        count += 1
-        print('内部 count =', count)
+def add_one():
+    global count        # 声明“下面的 count 就是全局那个”
+    count += 1          # 注意，global 会去找最外层的变量，所以我不在这里定义 exs02() 函数
+    print('内部 count =', count)
 
-    add_one()               # → 内部 count = 1
-    add_one()               # → 内部 count = 2
-    print('外部 count =', count)  # → 外部 count = 2
+
+add_one()               # → 内部 count = 1
+add_one()               # → 内部 count = 2
+print('外部 count =', count)  # → 外部 count = 2
 
 
