@@ -18,25 +18,18 @@ r"""
     上个文件中讲到可以使用sys动态修改导包路径，下面来看一下
 """
 
-
-# 首先可以直接导入 sys.path 路径下的 包（packages）和模块（module）
+# 可以去pkg1中看看发生了什么
 def exs11():
-    from sys01_base import exs01
-    exs01()
+    import pkg1
+    pkg1.model_a.func_a()
+    pkg1.model_b.func_b()
+
+
+# exs11()
 
 
 def exs12():
-    from dir1.my_packages import my_package
-    my_package()
+    from pkg1 import model_a
+    model_a.func_c()
 
-# def exs13():
-#     from . import sys01_base
-#     sys01_base.exs01()
-# exs13()
-
-
-# def exs13():
-#     sys.path.append(r'D:\NewFolder\pythonProject\study_note\src')
-# exs13()
-
-# model not found 问题还没解决，明天再来看看
+exs12()

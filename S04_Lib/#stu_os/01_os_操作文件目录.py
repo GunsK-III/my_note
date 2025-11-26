@@ -6,7 +6,7 @@ def exs01():
     print("当前工作路径：", os.getcwd())       # 获取当前工作路径
     print("路径下的目录：", os.listdir())      # 获取当前os路径下的文件和目录，类型为列表
 
-    os.chdir(r"D:\NewFolder\pythonProject\study_note\src\04_Stu_Module\#stu_os\new_dir2")     # 修改工作路径
+    os.chdir(r"D:\NewFolder\pythonProject\study_note\src\S04_Lib\#stu_os\new_dir2")     # 修改工作路径
     print("修改后的工作路径：", os.getcwd())
     print("路径下的目录：", os.listdir())
 
