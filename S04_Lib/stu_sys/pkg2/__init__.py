@@ -1,0 +1,1 @@
+print("pkg2 的 __init__.py 已执行。")

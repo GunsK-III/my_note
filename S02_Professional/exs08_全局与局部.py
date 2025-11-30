@@ -23,4 +23,3 @@ add_one()               # → 内部 count = 1
 add_one()               # → 内部 count = 2
 print('外部 count =', count)  # → 外部 count = 2
 
-
