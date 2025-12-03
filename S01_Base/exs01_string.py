@@ -90,7 +90,9 @@ def exs051():
     print(c.swapcase()) # 大小写转换
     print(c.title())    # 标题化
     e = "hello world"
-    print(e.split())    # 拆分字符串。>>['hello', 'world']
+    print("e: ", e.split())    # 拆分字符串。>>['hello', 'world']
+    f = "hello, world"
+    print("f: ", f.split(", "))     # 默认遇空格拆分，可以指定拆分符
     print(ord("a"), chr(97))
     print(eval("1+1"))  #字符串转换为表达式。
 
