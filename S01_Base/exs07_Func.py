@@ -24,7 +24,8 @@ def func3(user_input: str, other_input: str) -> tuple[int, str]:
        default arguments：默认参数。定义函数时使用。可赋予入参默认值。
        parameters：形式参数。定义函数时使用。默认参数之后不能有形式参数。
        *args：可变位置参数。定义函数时使用。可接受任意数量的位置参数。
-       **kwargs：可变关键字参数。定义函数时使用。可接受任意数量的关键字参数。"""
+       **kwargs：可变关键字参数。定义函数时使用。可接受任意数量的关键字参数。
+       相关链接：https://www.cnblogs.com/JZjuechen/p/15557351.html """
 def func4(par1: str, par2: str, def_arg1: str = 'def1', def_arg2: str = 'def2'):
     print(par1, par2, def_arg1, def_arg2)
 

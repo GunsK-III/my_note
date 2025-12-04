@@ -2,6 +2,7 @@
     目录：
         01. sorted()函数： 01 - 04
         02. map()函数：    05
+        03. help()函数：   06
 """
 
 
@@ -60,7 +61,6 @@ def exs04():
         {'name': 'David', 'grade': 85},  # 和 Alice 成绩相同
         {'name': 'Charlie', 'grade': 78}
     ]
-
     # 技巧：key 函数返回一个元组，元组中的元素按优先级排列。
     # 这里，我们希望成绩降序（所以用负数 -grade 来实现），姓名升序。
     sorted_students = sorted(students, key=lambda s: (-s['grade'], s['name']))
@@ -81,5 +81,10 @@ def exs05():
     list2 = list(map(lambda x: x ** 2, [1, 2, 3, 4, 5]))  # 使用 lambda 匿名函数
     print(list2)      # >> [1, 4, 9, 16, 25]
 
+
+def exs06():
+    """ help() 函数用于获取对象或模块的帮助信息。"""
+    a = True
+    print(help(a))
 
 
