@@ -1,13 +1,13 @@
-# @Title:   Face Detection
-# @Author:  FanDC(Yang Fan 46)
-# @Email:   a2078769713@outlook.com
-# @Time:    2024/06/07
-# --------------------------------------
+""" name: 课设 - 视频人物面部识别
+    date: 2024/06/07
+    desc: 从视频中或摄像头画面中识别人脸
+"""
 
 import cv2
 
-face_cascade = cv2.CascadeClassifier(r"D:\NewFolder\pythonProject1\.venv\Lib\site-packages\cv2\data\haarcascade_frontalface_default.xml")
-eye_cascade = cv2.CascadeClassifier(r"D:\NewFolder\pythonProject1\.venv\Lib\site-packages\cv2\data\haarcascade_eye.xml")
+cv2_data_path = cv2.data.haarcascades   # 自动获取 data 路径
+face_cascade = cv2.CascadeClassifier(cv2_data_path + "/haarcascade_eye.xml")
+eye_cascade = cv2.CascadeClassifier(cv2_data_path + "/haarcascade_eye.xml")
 
 # cap = cv2.VideoCapture(r"D:\A_Files_Saved\videos\vid04.mp4")
 cap = cv2.VideoCapture(0)

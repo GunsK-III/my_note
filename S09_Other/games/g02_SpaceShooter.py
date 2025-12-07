@@ -2,7 +2,6 @@ import pygame
 import sys
 import random
 
-# 初始化 pygame
 pygame.init()
 
 # 屏幕设置

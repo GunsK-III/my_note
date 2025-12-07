@@ -1,4 +1,7 @@
-# 对图片进行目标检测
+""" name: 课设 - 目标检测（图片）
+    date: 2024/06/02
+    desc: 对图片内容进行目标检测
+"""
 import cv2
 import numpy as np
 

@@ -1,16 +1,12 @@
-# Opencv 图像处理
-# 基础练习
+# Opencv 图像处理基础操作
 import cv2
 
 image = cv2.imread(r"D:\A_Image_Saved\tree.png")
-#
-# # 窗口可调
-# cv2.namedWindow("Tree", cv2.WINDOW_NORMAL)
 
-# cv2.imshow("Tree", image)
-# a = cv2.waitKey(0)
-# print(a)
-# cv2.destroyAllWindows()
+cv2.namedWindow("Tree", cv2.WINDOW_NORMAL)    # 窗口可调
+cv2.imshow("Tree", image)
+a = cv2.waitKey(0)
+cv2.destroyAllWindows()     # 销毁窗口，释放资源
 
 # 转灰度
 # gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -19,7 +15,7 @@ image = cv2.imread(r"D:\A_Image_Saved\tree.png")
 # print(image.shape)     # >>(720,1280,3)
 
 # 缩放
-# resized = cv2.resize(image, (540, 360))               # 常用
+# resized = cv2.resize(image, (540, 360))      # 常用
 # gray = cv2.cvtColor(resized, cv2.COLOR_BGR2GRAY)
 # cv2.imshow("Resized", resized)
 # cv2.waitKey(0)

@@ -1,4 +1,7 @@
-# 对视频进行目标检测，并且可以将检测结果作为视频帧输出
+""" name: 课设 - 目标检测（视频）
+    date: 2024/06/02
+    desc: 对视频内容进行目标检测
+"""
 import cv2
 import numpy as np
 
@@ -12,22 +15,16 @@ with open(r"D:\NewFolder\Py_Folder\yolo_obj_detection\yolo\coco.names", 'r') as 
 layer_names = net.getLayerNames()
 output_layers = [layer_names[i - 1] for i in net.getUnconnectedOutLayers()]
 
-cap = cv2.VideoCapture(r"D:\A_Files_Saved\videos\Cap01.mp4")
+cap = cv2.VideoCapture(r"D:\A_Files_Saved\videos\road01.mp4")
 # cap = cv2.VideoCapture(0)
 fps = cap.get(cv2.CAP_PROP_FPS)
-
-# 输出层
-# save_path = r"D:\A_Files_Saved\videos\Cap01_YOLO.mp4"
-# fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-# width0, height0 = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-# out0 = cv2.VideoWriter(save_path, fourcc, fps, (width0, height0))
 
 # 设置跳帧，来将视频播放速度和原视频对齐
 # skip_frame = 2      # 这个参数指的每几帧挑一帧
 # count = 0
 
 while True:
-    ret, frame0 = cap.read()
+    ret, frame = cap.read()
     if not ret:
         break
 
@@ -35,10 +32,9 @@ while True:
     # if count % skip_frame == 0:       # 跳帧
     #     continue
 
-    height, width, channels = frame0.shape
-    # height = int(height / 2)
-    # width = int(width / 2)
-    frame = cv2.resize(frame0, (width, height))
+    height, width, channels = frame.shape
+    # height,width = int(height / 2), int(width / 2)
+    frame = cv2.resize(frame, (width, height))
     # 图像预处理
     blob = cv2.dnn.blobFromImage(frame, 0.00392, (416, 416), (0, 0, 0), True, crop=False)
     net.setInput(blob)
@@ -79,12 +75,10 @@ while True:
             cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
             cv2.putText(frame, label + " " + confidence, (x, y + 30), font, 2, color, 2)
 
-    cv2.imshow("Vid", frame0)
+    # cv2.imshow("Vid", frame)
     cv2.imshow("Vid_YOLO", frame)
-    # out0.write(frame)       # 写入视频
     if cv2.waitKey(int(1000/fps)) & 0xFF == ord('q'):
         break
 
 cap.release()
-# out0.release()
 cv2.destroyAllWindows()

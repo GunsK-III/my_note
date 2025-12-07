@@ -1,14 +1,18 @@
-'''这个程序会保存视频帧到本地！不要随便运行！！！'''
-# 对原始视频的每一帧，压缩到指定大小。使用窗口自左至右、自上向下滑动采样，获取每帧的许多切片
+""" name: 课设 - 模型训练
+    date: 2024/05/04
+    desc: 这个程序会保存视频帧到本地！不要随便运行！！！
+"""
+
 import pandas as pd
 import os
 import cv2
 import numpy as np
 
+# 对原始视频的每一帧，压缩到指定大小。使用窗口自左至右、自上向下滑动采样，获取每帧的许多切片
 height_compressed = 640  # 帧压缩的高度
 width_compressed = 360  # 帧压缩的宽度
-path = "D:/NewFolder/ObjectDetection_YF/videos/"
-path_frame = "D:/NewFolder/ObjectDetection_YF/seg_frames/"
+path = "/ObjectDetection_YF/videos/"
+path_frame = "/ObjectDetection_YF/seg_frames/"
 
 cap = cv2.VideoCapture(path + "man.mp4")
 n_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
@@ -59,7 +63,7 @@ for file_name in source_file_list[0:]:  # 遍历源某类别目录下的所有�
 import time
 import matplotlib.pyplot as plt
 # 保存标注图片的子文件夹所在位置
-path2 = r"D:/NewFolder/ObjectDetection_YF/frames/"
+path2 = r"/ObjectDetection_YF/frames/"
 source_category_list = os.listdir(path2)
 print('original目录下的子目录为：\n', source_category_list)
 
@@ -85,7 +89,7 @@ X = X.reshape(len(y), -1)
 print('数据集的形状为：', X.shape)
 print('目标集的形状为：', y.shape)
 
-path3 = "D:/NewFolder/ObjectDetection_YF/data/"
+path3 = "/ObjectDetection_YF/data/"
 if not os.path.exists(path3):
     os.makedirs(path3)
 df_images_data = pd.DataFrame(X)
@@ -109,7 +113,7 @@ for fignum in range(len(idx)):
     p.tight_layout()  # 调整空白，避免子图重叠
 
 # 读取图像数据集文本文件，训练分类器，实验SVM分类
-path = "D:/NewFolder/ObjectDetection_YF/data/"
+path = "/ObjectDetection_YF/data/"
 # 读取保存的图像数据集文件
 X = pd.read_table(path+'my_data.csv', sep=',', encoding='gbk').values   # 读取csv文本文件
 y = pd.read_table(path+'my_target.csv', sep=',', encoding='gbk').values   # 读取csv文本文件
@@ -150,7 +154,7 @@ print('交叉检验的结果为：',cross_val_score(clf_svm, X, y.ravel(), cv=5)
 
 # 保存训练的支持向量机分类模型
 import joblib
-path_models = "D:/NewFolder/ObjectDetection_YF/models/"
+path_models = "/ObjectDetection_YF/models/"
 
 if not os.path.exists(path_models):
     os.makedirs(path_models)

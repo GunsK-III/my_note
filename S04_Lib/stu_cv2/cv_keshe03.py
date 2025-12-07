@@ -1,10 +1,11 @@
-# 对图片进行面部识别
+""" name: 课设 - 图片人物面部识别
+    date: 2024/06/03
+"""
 import cv2
 
-face_cascade = cv2.CascadeClassifier(r"D:\NewFolder\pythonProject\study_note\.venv\Lib\site-packages\cv2\data"
-                                     r"\haarcascade_frontalface_default.xml")
-eye_cascade = cv2.CascadeClassifier(r"D:\NewFolder\pythonProject\study_note\.venv\Lib\site-packages\cv2\data"
-                                    r"\haarcascade_eye.xml")
+cv2_data_path = cv2.data.haarcascades   # 自动获取 data 路径
+face_cascade = cv2.CascadeClassifier(cv2_data_path + "/haarcascade_eye.xml")
+eye_cascade = cv2.CascadeClassifier(cv2_data_path + "/haarcascade_eye.xml")
 
 img = cv2.imread(r"D:\A_Image_Saved\emotion\Carrey.png")
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -22,3 +23,5 @@ cv2.imshow('img', img)
 cv2.namedWindow('img', cv2.WINDOW_NORMAL)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+

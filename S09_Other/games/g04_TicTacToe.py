@@ -2,10 +2,8 @@ import pygame
 import sys
 import math
 
-# 初始化 pygame
 pygame.init()
 
-# 常量
 WIDTH, HEIGHT = 600, 700
 BOARD_SIZE = 3
 CELL_SIZE = WIDTH // BOARD_SIZE
@@ -24,7 +22,7 @@ TEXT_COLOR = (255, 255, 255)
 BUTTON_COLOR = (66, 66, 66)
 BUTTON_HOVER_COLOR = (50, 50, 50)
 
-# 设置屏幕
+# 屏幕
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("井字棋 - Tic Tac Toe (人机对战)")
 font = pygame.font.SysFont(None, 60)
@@ -163,7 +161,6 @@ def draw_restart_button():
     return button_rect
 
 
-# 主循环
 running = True
 while running:
     draw_board()
@@ -197,7 +194,7 @@ while running:
             if button_rect.collidepoint(event.pos):
                 reset_game()
 
-    # AI 自动下棋
+    # AI
     if not game_over and player == 'X':
         ai_move()
         winner = check_winner(board)
