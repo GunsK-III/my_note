@@ -1,5 +1,3 @@
-# 第一课
-
 class Person:
     # 类常量 - 所有实例共享，不能修改
     SPECIES = "人类"
