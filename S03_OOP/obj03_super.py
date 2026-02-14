@@ -20,7 +20,6 @@ class Dog(Animal):
         print(f"{self.name}吃完后摇尾巴")
 
 
-# 测试
 dog = Dog("旺财", "金毛")
 print("---")
 dog.eat()

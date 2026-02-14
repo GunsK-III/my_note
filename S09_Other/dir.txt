@@ -1,0 +1,62 @@
+Disk/
+├── C/
+├── D/
+│   ├── _saved_file
+│   │        ├── _img
+│   │        ├── _vid
+│   │        ├── _doc
+│   │        ├── ExplorPlugin
+│   │        └── scholar
+│   ├── _temp_file
+│   ├── Download_file
+│   │        ├── ChomeDownload
+│   │        ├── EdgeDownload
+│   │        ├── FirefoxDownload
+│   │        ├── packages
+│   │        ├── QQ-Files
+│   │        └── WeChat-Files
+│   ├── FolderAmuse
+│   │        ├── CS1.6
+│   │        ├── PVZ_HE
+│   │        └── Vice City
+│   ├── FolderMain
+│   │        ├── WeChat
+│   │        ├── WPS
+│   │        ├── WeMeet
+│   │        ├── Chrome
+│   │        ├── FireFox
+│   │        ├── JianYingPro
+│   │        ├── Watt Toolkit
+│   │        ├── vivoPC
+│   │        ├── quark
+│   │        ├── BaiduNetdisk
+│   │        ├── 7zip
+│   │        ├── BandZIP
+│   │        ├── X-mind
+│   │        ├── DingTalk
+│   │        └── uu
+│   ├── FolderTools
+│   │        ├── everything
+│   │        ├── notepad--
+│   │        ├── pdfgear
+│   │        ├── ocam			# 录屏
+│   │        ├── snipaste		# 截图
+│   │        ├── potplayer		# 播放器
+│   │        └── v2rayn			# 加速器
+│   ├── FolderWorker
+│   │        ├── python3
+│   │        ├── Pycharm
+│   │        ├── Git
+│   │        ├── Airtest
+│   │        ├── Postman
+│   │        ├── Charles
+│   │        ├── APIfox
+│   │        ├── Jmeter
+│   │        ├── Airtest
+│   │        ├── Navicat
+│   ├── pythonProgram
+│   │        ├── my_note
+│   │        └── my_tester
+│   └── Var
+
+
